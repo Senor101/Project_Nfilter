@@ -17,10 +17,10 @@ def main():
     
 def download_images():
     #no of images you want
-    n=2;
+    n=100;
 
     #keyword for what you are searching 
-    search_for='nude chicks'
+    search_for='nude female'
     
     search_url = url_prefix+search_for+url_postfix
     
