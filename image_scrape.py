@@ -1,4 +1,4 @@
-sfrom selenium import webdriver
+from selenium import webdriver
 import os
 import urllib.request
 import time
