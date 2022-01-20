@@ -20,7 +20,7 @@ def download_images():
     n=100;
 
     #keyword for what you are searching 
-    search_for='nude female'
+    search_for='null'
     
     search_url = url_prefix+search_for+url_postfix
     
