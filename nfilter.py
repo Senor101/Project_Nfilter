@@ -28,10 +28,11 @@ while True:
     pred=mymodel.predict(test_image)[0][0]
     #print(pred)
     if(pred>0.5).all():
-        cv2.putText(resized, 'Nude', (50,50), cv2.FONT_HERSHEY_COMPLEX, 
+        resized = cv2.GaussianBlur(resized, (45, 45), 0)           #adding blur if NSFW content is found
+        cv2.putText(resized, 'Not safe for work!', (50,50), cv2.FONT_HERSHEY_COMPLEX, 
                    1, (255,0,0), 2, cv2.LINE_AA)
     elif(pred<0.5).all():
-        cv2.putText(resized, 'Not Nude', (50,50), cv2.FONT_HERSHEY_COMPLEX, 
+        cv2.putText(resized, 'Safe for work!', (50,50), cv2.FONT_HERSHEY_COMPLEX, 
                    1, (255,0,0), 2, cv2.LINE_AA)
     else:
         print("Invalid")
