@@ -15,7 +15,7 @@ mymodel = load_model('spd.h5')
 
 while True:
     ret,frame = cap.read()
-    resized = cv2.resize(frame,(200,200))
+    frame = cv2.resize(frame,(200,200))
     cv2.imwrite('temp.jpg',frame)
     test_image=image.load_img('temp.jpg',target_size=(200,200,3))
     test_image=image.img_to_array(test_image)
