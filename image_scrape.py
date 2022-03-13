@@ -1,3 +1,5 @@
+#This is automation used to download images from google for training our CNN model.
+
 from selenium import webdriver
 import os
 import urllib.request
