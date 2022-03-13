@@ -16,7 +16,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
 cap.set(cv2.CAP_PROP_FPS, 30)
 
-mymodel = load_model(r"D:\Projects\SPD\spd.h5")
+mymodel = load_model(r"D:\Projects\SPD\spd.h5")  #here load your trained model from where you saved it
 
 while True:
     ret,frame = cap.read()
@@ -38,7 +38,7 @@ while True:
         print("Invalid")
             
             
-    cv2.imshow('humans',resized)
+    cv2.imshow('NFilter',resized)
     #stop if escape key is pressed
     k = cv2.waitKey(30) & 0xff
     if k==27:
